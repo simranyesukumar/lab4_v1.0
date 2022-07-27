@@ -20,4 +20,4 @@ def predict():
     return render_template('index.html', prediction_text = 'The species that the fish belongs to is {}'.format(str(preds)))
 
 if __name__=='__main__':
-    app.run()
+    app.run(host='0.0.0.0',debug=True,port=port)
