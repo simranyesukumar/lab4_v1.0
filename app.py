@@ -6,6 +6,7 @@ from flask import Flask, request, jsonify, render_template
 app=Flask(__name__)
 pickle_input = open("Simran_NuthalapatiYesukumar_model.pkl","rb")
 random_forest_model = pickle.load(pickle_input)
+port = int(os.environ.get("PORT", 8000))
 
 @app.route('/')
 def home():
